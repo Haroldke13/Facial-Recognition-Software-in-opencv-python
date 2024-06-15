@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Third-party personal / biometric data - MUST NOT be committed.
+# These files stay on disk locally but are never tracked by git.
+# ---------------------------------------------------------------------------
+# Photographs of identifiable individuals used as UI assets / training input
+*.jpg
+*.jpeg
+*.png
+# Locally captured face-sample dataset
+data/
+# Trained LBPH face recogniser (biometric templates derived from real faces)
+classifier.xml
+# Attendance logs containing real names, departments and timestamps
+*.csv
+
+# Stock OpenCV cascade files are NOT personal data - keep them tracked
+!haarcascade_frontalface_default.xml
+!lbpcascade_frontalface.xml
+
+# Logs & caches
+*.log
+.pytest_cache/
+.mypy_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
