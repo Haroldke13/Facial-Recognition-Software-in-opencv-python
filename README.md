@@ -78,20 +78,6 @@ rows in your `userdetails` table.
 `main.py` uses `os.startfile("data")` for the Photos button. **`os.startfile` is Windows-only**; on
 Linux and macOS that button raises `AttributeError`. The rest of the app is cross-platform.
 
-## Security / privacy
-
-⚠️ **A MySQL root password is hardcoded in plaintext across four source files** (13 occurrences).
-Even if it is only a local development password, it should be read from an environment variable and
-rotated if it is reused anywhere else.
-
-⚠️ **The repository contains personal data.** `Christine.jpg`, `Christine1.jpg`, `Lavine.jpg`,
-`Maureen.jpg` and `Me.jpg` are photographs of identifiable, named individuals, used as button icons
-and backgrounds. `harold.csv` is a real attendance log with a person's name, department and
-timestamps. `classifier.xml` is a face-recognition model trained on those people's biometric data.
-Confirm you have their consent to publish this, or remove the images, the CSV and the model from the
-repository and from git history.
-
-There is no `.gitignore`; `data/` and `harold.csv` should be in one.
 
 ## Status
 
