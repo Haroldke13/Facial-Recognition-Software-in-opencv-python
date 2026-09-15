@@ -45,3 +45,16 @@ classifier.xml
 .idea/
 .DS_Store
 Thumbs.db
+
+# --------------------------------------------------------------
+# Added: secrets, local state and generated artefacts.
+# NOTE: this does not untrack files already committed —
+#       use git rm --cached for those.
+# --------------------------------------------------------------
+# Local databases
+*.db
+*.sqlite3
+instance/
+
+# Face dataset and the generated attendance CSV
+harold.csv
